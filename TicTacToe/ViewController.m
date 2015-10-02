@@ -24,6 +24,7 @@
 @property CGPoint tappedPoint;
 @property int turnCount;
 
+@property NSString *testStringForGitHub;
 
 @end
 
