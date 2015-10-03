@@ -24,8 +24,6 @@
 @property CGPoint tappedPoint;
 @property int turnCount;
 
-@property NSString *testStringForGitHub;
-
 @end
 
 @implementation ViewController
@@ -35,6 +33,8 @@
     self.turnCount = 0;
     self.whichPlayerLabel.text = @"X";
     self.whichPlayerLabel.textColor = [UIColor blueColor];
+    self.whichPlayerLabel.font = [UIFont fontWithName:@"Arial" size:20];
+
 }
 
 -(UILabel *)findLabelUsingPoint:(CGPoint )point {
@@ -84,7 +84,7 @@
     if (self.turnCount % 2 == 0) {
         currentLabel.text = @"X";
         currentLabel.textColor = [UIColor blueColor];
-        currentLabel.font = [UIFont fontWithName:@"Arial" size:80];
+        currentLabel.font = [UIFont fontWithName:@"Arial" size:85];
         self.turnCount ++;
         self.whichPlayerLabel.text = @"O";
         self.whichPlayerLabel.textColor = [UIColor redColor];
@@ -93,7 +93,7 @@
     else {
         currentLabel.text = @"O";
         currentLabel.textColor = [UIColor redColor];
-        currentLabel.font = [UIFont fontWithName:@"Arial" size:80];
+        currentLabel.font = [UIFont fontWithName:@"Arial" size:85];
         self.turnCount ++;
         self.whichPlayerLabel.text = @"X";
         self.whichPlayerLabel.textColor = [UIColor blueColor];
@@ -140,6 +140,7 @@
 }
 
 -(void)resetGame{
+    self.turnCount = 0;
     self.labelOne.text = @"";
     self.labelTwo.text = @"";
     self.labelThree.text = @"";
