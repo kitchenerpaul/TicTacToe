@@ -37,11 +37,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    self.turnCount = 0;
-//    self.whichPlayerLabel.text = @"X";
-//    self.whichPlayerLabel.textColor = [UIColor blueColor];
-//    self.whichPlayerLabel.font = [UIFont fontWithName:@"Arial" size:20];
-
     [self resetGame];
 
 }
@@ -235,21 +230,246 @@
 
 }
 
+-(IBAction)panGesture:(UIPanGestureRecognizer *)panGestureRecognizer{
+    CGPoint point = [panGestureRecognizer locationInView:self.view];
+    self.whichPlayerLabel.center = point;
 
-//    if (self.labelOne ) {
-//        <#statements#>
-//    }
+/////labelOne
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelOne.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelOne.frame, point)) {
+                NSLog(@"logged");
+                self.labelOne.text = self.whichPlayerLabel.text;
+
+                if ([self.labelOne.text isEqualToString:@"X"]) {
+                    self.labelOne.textColor = [UIColor blueColor];
+                    self.labelOne.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelOne.textColor = [UIColor redColor];
+                    self.labelOne.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+
+/////labelTwo
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelTwo.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelTwo.frame, point)) {
+                NSLog(@"logged");
+                self.labelTwo.text = self.whichPlayerLabel.text;
+
+                if ([self.labelTwo.text isEqualToString:@"X"]) {
+                    self.labelTwo.textColor = [UIColor blueColor];
+                    self.labelTwo.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelTwo.textColor = [UIColor redColor];
+                    self.labelTwo.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+
+/////labelThree
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelThree.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelThree.frame, point)) {
+                NSLog(@"logged");
+                self.labelThree.text = self.whichPlayerLabel.text;
+
+                if ([self.labelThree.text isEqualToString:@"X"]) {
+                    self.labelThree.textColor = [UIColor blueColor];
+                    self.labelThree.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelThree.textColor = [UIColor redColor];
+                    self.labelThree.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+
+/////labelFour
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelFour.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelFour.frame, point)) {
+                NSLog(@"logged");
+                self.labelFour.text = self.whichPlayerLabel.text;
+
+                if ([self.labelFour.text isEqualToString:@"X"]) {
+                    self.labelFour.textColor = [UIColor blueColor];
+                    self.labelFour.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelFour.textColor = [UIColor redColor];
+                    self.labelFour.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+
+/////labelFive
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelFive.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelFive.frame, point)) {
+                NSLog(@"logged");
+                self.labelFive.text = self.whichPlayerLabel.text;
+
+                if ([self.labelFive.text isEqualToString:@"X"]) {
+                    self.labelFive.textColor = [UIColor blueColor];
+                    self.labelFive.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelFive.textColor = [UIColor redColor];
+                    self.labelFive.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+
+/////labelSix
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelSix.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelSix.frame, point)) {
+                NSLog(@"logged");
+                self.labelSix.text = self.whichPlayerLabel.text;
+
+                if ([self.labelSix.text isEqualToString:@"X"]) {
+                    self.labelSix.textColor = [UIColor blueColor];
+                    self.labelSix.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelSix.textColor = [UIColor redColor];
+                    self.labelSix.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+
+/////labelSeven
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelSeven.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelSeven.frame, point)) {
+                NSLog(@"logged");
+                self.labelSeven.text = self.whichPlayerLabel.text;
+
+                if ([self.labelSeven.text isEqualToString:@"X"]) {
+                    self.labelSeven.textColor = [UIColor blueColor];
+                    self.labelSeven.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelSeven.textColor = [UIColor redColor];
+                    self.labelSeven.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+
+/////labelEight
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelEight.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelEight.frame, point)) {
+                NSLog(@"logged");
+                self.labelEight.text = self.whichPlayerLabel.text;
+
+                if ([self.labelEight.text isEqualToString:@"X"]) {
+                    self.labelEight.textColor = [UIColor blueColor];
+                    self.labelEight.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelEight.textColor = [UIColor redColor];
+                    self.labelEight.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+
+/////labelNine
+
+    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+
+        if ([self.labelNine.text isEqualToString:@""]) {
+
+            if (CGRectContainsPoint(self.labelNine.frame, point)) {
+                NSLog(@"logged");
+                self.labelNine.text = self.whichPlayerLabel.text;
+
+                if ([self.labelNine.text isEqualToString:@"X"]) {
+                    self.labelNine.textColor = [UIColor blueColor];
+                    self.labelNine.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+                else {
+                    self.labelNine.textColor = [UIColor redColor];
+                    self.labelNine.font = [UIFont fontWithName:@"Arial" size:85];
+                    self.secondsInt = 11;
+                    [self turnMethod:self.whichPlayerLabel];
+                }
+            }
+        }
+    }
+}
 
 
-//-(IBAction)panGesture:(UIPanGestureRecognizer *)panGestureRecognizer{
-//    CGPoint point = [panGestureRecognizer locationInView:self.view];
-//    self.whichPlayerLabel.center = point;
-//
-//    if ([panGestureRecognizer ]) {
-//        <#statements#>
-//    }
-//
-//}
-
+    
 
 @end
