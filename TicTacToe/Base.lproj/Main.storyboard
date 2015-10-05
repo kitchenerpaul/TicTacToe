@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -76,7 +77,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai5-vA-1k8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai5-vA-1k8">
                                 <rect key="frame" x="130" y="479" width="60" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="EEA-NL-TKb"/>
@@ -166,10 +167,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2h-Rc-dd5">
+                                <rect key="frame" x="230" y="482" width="74" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="DbW-dX-CXg"/>
+                                    <constraint firstAttribute="height" constant="66" id="Ho6-sR-bd5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.652639678" blue="0.00019978853400000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k2h-Rc-dd5" secondAttribute="bottom" constant="20" id="26O-qo-Wcv"/>
                             <constraint firstItem="dXj-h2-Dio" firstAttribute="top" secondItem="Uni-ta-U4B" secondAttribute="bottom" constant="34" id="2lo-vQ-dfz"/>
                             <constraint firstItem="Ai5-vA-1k8" firstAttribute="top" secondItem="Uni-ta-U4B" secondAttribute="bottom" constant="57" id="7MQ-RF-Vh7"/>
                             <constraint firstItem="6zb-5F-ynU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7af-HI-bk3"/>
@@ -188,6 +200,7 @@
                             <constraint firstItem="6zb-5F-ynU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="ZPh-3q-Npp"/>
                             <constraint firstItem="ew7-1g-oN0" firstAttribute="top" secondItem="Wy8-Vp-At9" secondAttribute="bottom" constant="3" id="Zsc-aZ-MHJ"/>
                             <constraint firstItem="1hl-im-N5C" firstAttribute="top" secondItem="ueD-T1-mu8" secondAttribute="bottom" constant="3" id="aQI-jF-Mge"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k2h-Rc-dd5" secondAttribute="trailing" id="cAd-HU-TRd"/>
                             <constraint firstItem="6ez-mH-1TX" firstAttribute="leading" secondItem="ew7-1g-oN0" secondAttribute="trailing" constant="5" id="gtN-Hh-tBP"/>
                             <constraint firstItem="ueD-T1-mu8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hSG-p6-AKr"/>
                             <constraint firstItem="6ez-mH-1TX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="heB-54-UJP"/>
@@ -212,6 +225,7 @@
                         <outlet property="labelSix" destination="6ez-mH-1TX" id="2C0-vk-HjC"/>
                         <outlet property="labelThree" destination="mdB-78-bpX" id="xdr-AA-tVP"/>
                         <outlet property="labelTwo" destination="Wy8-Vp-At9" id="EQC-R9-lKQ"/>
+                        <outlet property="timerLabel" destination="k2h-Rc-dd5" id="yo6-gu-nBn"/>
                         <outlet property="whichPlayerLabel" destination="Ai5-vA-1k8" id="XbB-Rc-lCV"/>
                     </connections>
                 </viewController>
@@ -228,6 +242,24 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="162" y="346"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4qO-gy-sbX">
+            <objects>
+                <viewController id="W7m-T4-mv9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vbs-GZ-hlS"/>
+                        <viewControllerLayoutGuide type="bottom" id="BWD-d0-GAY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xw7-ER-R6N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ix-1V-l26" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="346"/>
         </scene>
     </scenes>
 </document>
