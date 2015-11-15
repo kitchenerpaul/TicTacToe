@@ -41,13 +41,10 @@
 
 }
 
-- (IBAction)unwindToMainMenu:(UIStoryboardSegue *)sender
-{
-//    UIViewController *viewController = sender.sourceViewController;
-//    // Pull any data from the view controller which initiated the unwind segue.
+- (IBAction)unwindToMainMenu:(UIStoryboardSegue *)sender {
 }
 
--(UILabel *)findLabelUsingPoint:(CGPoint )point {
+-(UILabel *)findLabelUsingPoint:(CGPoint)point {
 
     if (CGRectContainsPoint(self.labelOne.frame, point)) {
         return self.labelOne;
@@ -78,10 +75,9 @@
     } else {
         return nil;
     }
-
 }
 
--(IBAction)labelTapped:(UITapGestureRecognizer *)tapGestureRecognizer{
+-(IBAction)labelTapped:(UITapGestureRecognizer *)tapGestureRecognizer {
 
     self.tappedPoint = [tapGestureRecognizer locationInView:self.view];
     UILabel *label = [self findLabelUsingPoint:self.tappedPoint];
@@ -95,7 +91,7 @@
 
 -(void)turnMethod:(UILabel *)currentLabel {
 
-   if (self.turnCount % 2 == 0) {
+    if (self.turnCount % 2 == 0) {
 
         currentLabel.text = @"X";
         currentLabel.textColor = [UIColor blueColor];
@@ -138,15 +134,16 @@
         self.whichPlayerLabel.hidden = YES;
         self.timerLabel.hidden = YES;
         [self winningAlert:@"X won!"];
-        
-    } else if (([self.labelOne.text isEqual:@"O"] && [self.labelTwo.text isEqual: @"O"] && [self.labelThree.text isEqual: @"O"]) ||
-        ([self.labelFour.text isEqual: @"O"] && [self.labelFive.text isEqual: @"O"] && [self.labelSix.text isEqual: @"O"]) ||
-        ([self.labelSeven.text  isEqual: @"O"] && [self.labelEight.text  isEqual: @"O"] && [self.labelNine.text  isEqual: @"O"]) ||
-        ([self.labelOne.text isEqual: @"O"] && [self.labelFour.text isEqual: @"O"] && [self.labelSeven.text isEqual: @"O"]) ||
-        ([self.labelTwo.text isEqual: @"O"] && [self.labelFive.text isEqual: @"O"] && [self.labelEight.text isEqual: @"O"]) ||
-        ([self.labelThree.text isEqual: @"O"] && [self.labelSix.text isEqual: @"O"] && [self.labelNine.text isEqual: @"O"]) ||
-        ([self.labelOne.text isEqual: @"O"] && [self.labelFive.text  isEqual: @"O"] && [self.labelNine.text isEqual: @"O"]) ||
-        ([self.labelThree.text isEqual: @"O"] && [self.labelFive.text isEqual: @"O"] && [self.labelSeven.text  isEqual: @"O"])) {
+
+    } else if (
+               ([self.labelOne.text isEqual:@"O"] && [self.labelTwo.text isEqual: @"O"] && [self.labelThree.text isEqual: @"O"]) ||
+               ([self.labelFour.text isEqual: @"O"] && [self.labelFive.text isEqual: @"O"] && [self.labelSix.text isEqual: @"O"]) ||
+               ([self.labelSeven.text  isEqual: @"O"] && [self.labelEight.text  isEqual: @"O"] && [self.labelNine.text  isEqual: @"O"]) ||
+               ([self.labelOne.text isEqual: @"O"] && [self.labelFour.text isEqual: @"O"] && [self.labelSeven.text isEqual: @"O"]) ||
+               ([self.labelTwo.text isEqual: @"O"] && [self.labelFive.text isEqual: @"O"] && [self.labelEight.text isEqual: @"O"]) ||
+               ([self.labelThree.text isEqual: @"O"] && [self.labelSix.text isEqual: @"O"] && [self.labelNine.text isEqual: @"O"]) ||
+               ([self.labelOne.text isEqual: @"O"] && [self.labelFive.text  isEqual: @"O"] && [self.labelNine.text isEqual: @"O"]) ||
+               ([self.labelThree.text isEqual: @"O"] && [self.labelFive.text isEqual: @"O"] && [self.labelSeven.text  isEqual: @"O"])) {
 
         [self.countDownTimer invalidate];
         self.countDownTimer = nil;
@@ -154,8 +151,7 @@
         self.timerLabel.hidden = YES;
         [self winningAlert:@"O won!"];
 
-    } else if (
-               ([self.labelOne.text isEqualToString:@"X"] || [self.labelOne.text isEqualToString:@"O"]) &&
+    } else if (([self.labelOne.text isEqualToString:@"X"] || [self.labelOne.text isEqualToString:@"O"]) &&
                ([self.labelTwo.text isEqualToString:@"X"] || [self.labelTwo.text isEqualToString:@"O"]) &&
                ([self.labelThree.text isEqualToString:@"X"] || [self.labelThree.text isEqualToString:@"O"]) &&
                ([self.labelFour.text isEqualToString:@"X"] || [self.labelFour.text isEqualToString:@"O"]) &&
@@ -199,13 +195,12 @@
 
 }
 
--(void)resetGame{
+-(void)resetGame {
 
     self.turnCount = 0;
     self.whichPlayerLabel.text = @"X";
     self.whichPlayerLabel.textColor = [UIColor blueColor];
     self.whichPlayerLabel.font = [UIFont fontWithName:@"Arial" size:20];
-
     self.whichPlayerLabel.hidden = NO;
     self.timerLabel.hidden = NO;
     self.secondsInt = 11;
@@ -240,7 +235,7 @@
     CGPoint point = [panGestureRecognizer locationInView:self.view];
     self.whichPlayerLabel.center = point;
 
-/////labelOne
+    /////labelOne
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -266,7 +261,7 @@
         }
     }
 
-/////labelTwo
+    /////labelTwo
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -292,7 +287,7 @@
         }
     }
 
-/////labelThree
+    /////labelThree
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -318,7 +313,7 @@
         }
     }
 
-/////labelFour
+    /////labelFour
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -344,7 +339,7 @@
         }
     }
 
-/////labelFive
+    /////labelFive
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -370,7 +365,7 @@
         }
     }
 
-/////labelSix
+    /////labelSix
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -396,7 +391,7 @@
         }
     }
 
-/////labelSeven
+    /////labelSeven
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -422,7 +417,7 @@
         }
     }
 
-/////labelEight
+    /////labelEight
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -448,7 +443,7 @@
         }
     }
 
-/////labelNine
+    /////labelNine
 
     if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
 
@@ -474,12 +469,5 @@
         }
     }
 }
-
-//PLAY AS COMPUTER
-
-
-
-
-    
 
 @end

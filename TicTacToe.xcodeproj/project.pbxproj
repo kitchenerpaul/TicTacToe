@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17B0F5C01BC1FFF000560F46 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B0F5BF1BC1FFF000560F46 /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		17B0F5C01BC1FFF000560F46 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B0F5BF1BC1FFF000560F46 /* WebViewController.m */; };
 		17DFE0431BBDBE6800315EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DFE0421BBDBE6800315EBA /* main.m */; };
 		17DFE0461BBDBE6800315EBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DFE0451BBDBE6800315EBA /* AppDelegate.m */; };
 		17DFE0491BBDBE6800315EBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DFE0481BBDBE6800315EBA /* ViewController.m */; };
@@ -61,14 +61,14 @@
 		17DFE0401BBDBE6800315EBA /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				17DFE0441BBDBE6800315EBA /* AppDelegate.h */,
-				17DFE0451BBDBE6800315EBA /* AppDelegate.m */,
 				17DFE04A1BBDBE6800315EBA /* Main.storyboard */,
 				17DFE0471BBDBE6800315EBA /* ViewController.h */,
 				17DFE0481BBDBE6800315EBA /* ViewController.m */,
 				17B0F5BE1BC1FFF000560F46 /* WebViewController.h */,
 				17B0F5BF1BC1FFF000560F46 /* WebViewController.m */,
 				17DFE04D1BBDBE6800315EBA /* Assets.xcassets */,
+				17DFE0441BBDBE6800315EBA /* AppDelegate.h */,
+				17DFE0451BBDBE6800315EBA /* AppDelegate.m */,
 				17DFE04F1BBDBE6800315EBA /* LaunchScreen.storyboard */,
 				17DFE0521BBDBE6800315EBA /* Info.plist */,
 				17DFE0411BBDBE6800315EBA /* Supporting Files */,
