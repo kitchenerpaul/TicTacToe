@@ -41,6 +41,12 @@
 
 }
 
+- (IBAction)unwindToMainMenu:(UIStoryboardSegue *)sender
+{
+//    UIViewController *viewController = sender.sourceViewController;
+//    // Pull any data from the view controller which initiated the unwind segue.
+}
+
 -(UILabel *)findLabelUsingPoint:(CGPoint )point {
 
     if (CGRectContainsPoint(self.labelOne.frame, point)) {
@@ -468,6 +474,10 @@
         }
     }
 }
+
+//PLAY AS COMPUTER
+
+
 
 
     
